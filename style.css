@@ -13,7 +13,7 @@ body{
 }
 #header{
     width: 50%;
-    height: 50vh;
+    height: 100vh;
     background-image: url(images/Suit.jpg);
     background-size: cover;
     background-position:  center;

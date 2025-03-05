@@ -17,8 +17,8 @@ body{
     background-image: url('images/Background1.jpg');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position:  right center;
-    overflow: hidden;
+    background-position: center;
+    /*overflow: hidden;*/
 }
 
 .container{

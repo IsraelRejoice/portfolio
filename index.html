@@ -1,220 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/672e8d541a.js" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Israel Onakoya | Web Developer & Executive Assistant at Veridos</title>
+<meta name="description" content="Israel Onakoya Olasubomi: web developer, product and operations professional, and Executive Assistant at Veridos in Nigeria.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0e1f2c;--ink2:#41525e;--paper:#f2f6f4;--card:#fff;--line:#d3dfda;--green:#0b7a57;--green-d:#075a40;--amber:#e3a32a;--guil:#c3dbd2;
+--display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--body:"Instrument Sans","Segoe UI",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:10;background:rgba(242,246,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:var(--display);font-weight:800;font-size:1.25rem;text-decoration:none}
+nav ul{display:flex;gap:26px;list-style:none}
+nav ul a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--ink2)}
+nav ul a:hover{color:var(--green)}
+.hero{position:relative;overflow:hidden;padding:84px 0 96px}
+.hero svg.guil{position:absolute;right:-180px;top:-120px;width:760px;opacity:.9;pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,6.2vw,4.9rem);line-height:1.02;letter-spacing:-.03em}
+.hero .role{margin-top:22px;font-size:1.2rem;color:var(--ink2);max-width:34em}
+.hero .role b{color:var(--ink);font-weight:600}
+.btns{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 24px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--ink);transition:transform .15s,background .15s}
+.btn.p{background:var(--ink);color:#fff}
+.btn.p:hover{background:var(--green-d);border-color:var(--green-d)}
+.btn.s:hover{background:var(--ink);color:#fff}
+.idcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 18px 40px -18px rgba(14,31,44,.35);max-width:340px;justify-self:end}
+.idcard img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;display:block;background:var(--guil)}
+.idcard dl{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;margin-top:14px;font-size:.88rem}
+.idcard dt{color:var(--ink2)}
+.idcard dd{font-weight:600}
+section{padding:80px 0}
+section.alt{background:var(--card);border-block:1px solid var(--line)}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,3.6vw,2.6rem);letter-spacing:-.02em;line-height:1.1;margin-bottom:34px}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:56px}
+.about p+p{margin-top:16px}
+.skills{list-style:none;display:flex;flex-wrap:wrap;gap:10px;align-content:flex-start}
+.skills li{padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--card);font-weight:500;font-size:.95rem}
+.current{border:2px solid var(--ink);border-radius:18px;padding:34px;background:var(--paper);display:grid;grid-template-columns:.8fr 1.2fr;gap:36px}
+.current h3{font-family:var(--display);font-size:1.7rem;line-height:1.15}
+.current .org{color:var(--green);font-weight:600;margin-top:8px}
+.current .meta{color:var(--ink2);font-size:.92rem;margin-top:4px}
+.current ul{padding-left:20px}
+.current li+li{margin-top:8px}
+.tl{margin-top:44px;border-left:3px solid var(--line);padding-left:28px;display:grid;gap:26px}
+.tl div{position:relative}
+.tl div::before{content:"";position:absolute;left:-37px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--green)}
+.tl h4{font-size:1.05rem}
+.tl p{color:var(--ink2);font-size:.95rem}
+.projects{display:grid;gap:26px}
+.feature{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card)}
+.feature .art{background:var(--ink);color:#fff;padding:36px;display:flex;flex-direction:column;justify-content:space-between;min-height:280px;position:relative;overflow:hidden}
+.feature .art::after{content:"";position:absolute;inset:auto -60px -90px auto;width:260px;height:260px;border-radius:50%;border:34px solid rgba(227,163,42,.25)}
+.feature .art strong{font-family:var(--display);font-size:2.2rem;line-height:1.05}
+.feature .art span{color:var(--guil);font-size:.95rem}
+.feature .body{padding:36px}
+.feature h3{font-family:var(--display);font-size:1.6rem;margin-bottom:10px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 24px;list-style:none}
+.tags li{font-size:.82rem;padding:4px 12px;background:var(--paper);border-radius:6px;border:1px solid var(--line)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.card img{width:100%;height:180px;object-fit:cover;display:block;background:var(--guil)}
+.card div{padding:22px}
+.card h3{font-family:var(--display);font-size:1.2rem;margin-bottom:6px}
+.card p{color:var(--ink2);font-size:.95rem}
+.edu{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:44px}
+.edu p{padding:16px 20px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.edu small{display:block;color:var(--ink2)}
+.contact{background:var(--ink);color:#fff}
+.contact h2{margin-bottom:14px}
+.contact p.lead{color:#b9c9d1;max-width:34em;margin-bottom:30px}
+.contact .links{display:flex;flex-wrap:wrap;gap:12px}
+.contact .links a{padding:11px 20px;border:1px solid #3b5565;border-radius:8px;text-decoration:none;font-weight:500}
+.contact .links a:hover{border-color:var(--amber);color:var(--amber)}
+.contact .links a.main{background:var(--amber);border-color:var(--amber);color:var(--ink);font-weight:600}
+.contact .links a.main:hover{color:var(--ink);background:#f0b84a}
+footer{background:var(--ink);color:#8ea3ae;text-align:center;padding:26px 0;font-size:.88rem;border-top:1px solid #243b4a}
+.hero .wrap>*{animation:rise .7s both}
+.hero .wrap>*:nth-child(2){animation-delay:.12s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+@media(max-width:860px){
+ nav ul{gap:14px}nav ul li:nth-child(n+4){display:none}
+ .hero .wrap,.about,.current,.feature,.grid3,.edu{grid-template-columns:1fr}
+ .idcard{justify-self:start}
+ .hero svg.guil{width:520px;right:-220px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
 </head>
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <h1 class="logo">Rejo<span>ice</span></h1>
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p></p>
-                <h1>Hello, I am Israel<br><span>Onakoya Olasubomi</span> <br>from Nigeria<br></h1>
-            </div>
-        </div>
+<header>
+ <nav class="wrap" aria-label="Main">
+  <a class="logo" href="#top">Israel Onakoya</a>
+  <ul>
+   <li><a href="#about">About</a></li>
+   <li><a href="#experience">Experience</a></li>
+   <li><a href="#projects">Projects</a></li>
+   <li><a href="#contact">Contact</a></li>
+  </ul>
+ </nav>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-top:84px">
+ <svg class="guil" viewBox="-200 -200 400 400" fill="none" stroke="#c3dbd2" stroke-width="1" aria-hidden="true">
+  <g id="r"><ellipse rx="190" ry="60"/><ellipse rx="190" ry="60" transform="rotate(10)"/><ellipse rx="190" ry="60" transform="rotate(20)"/><ellipse rx="190" ry="60" transform="rotate(30)"/><ellipse rx="190" ry="60" transform="rotate(40)"/><ellipse rx="190" ry="60" transform="rotate(50)"/><ellipse rx="190" ry="60" transform="rotate(60)"/><ellipse rx="190" ry="60" transform="rotate(70)"/><ellipse rx="190" ry="60" transform="rotate(80)"/></g>
+  <use href="#r" transform="rotate(90)"/>
+  <circle r="196"/><circle r="150"/><circle r="100"/>
+ </svg>
+ <div class="wrap">
+  <div>
+   <h1>Israel Onakoya Olasubomi</h1>
+   <p class="role">Web developer and operations professional from Nigeria. I'm currently the <b>Executive Assistant to the VP Sales MEA at Veridos</b>, supporting secure identity solutions across the region, and I build web apps in my own time.</p>
+   <div class="btns">
+    <a class="btn p" href="#projects">See my projects</a>
+    <a class="btn s" href="images/ONAKOYA%20OLASUBOMI%20ISRAEL%201.pdf">Download CV</a>
+   </div>
+  </div>
+  <aside class="idcard" aria-label="Quick profile">
+   <img src="images/InShot_20250225_135354664.jpg" alt="Portrait of Israel Onakoya">
+   <dl>
+    <dt>Role</dt><dd>Executive Assistant</dd>
+    <dt>Company</dt><dd>Veridos</dd>
+    <dt>Based in</dt><dd>Nigeria</dd>
+    <dt>Builds</dt><dd>Web &amp; apps</dd>
+   </dl>
+  </aside>
+ </div>
+</section>
+
+<section id="about" class="alt">
+ <div class="wrap about">
+  <div>
+   <h2>About me</h2>
+   <p>I'm a Nigerian professional who works where operations, people and technology meet. I trained in web development at Zuri Tech and Cww Africa, and I hold an HND and an OND from Yaba College of Technology.</p>
+   <p>My career has covered logistics and farm operations, HR verification, customer support and telesales, and product management for gaming products. Today I support the sales leadership of Veridos in the Middle East and Africa, and I keep building: clean interfaces, useful tools, and apps that solve a real problem.</p>
+  </div>
+  <ul class="skills" aria-label="Skills">
+   <li>Web &amp; app interface design</li>
+   <li>Product management</li>
+   <li>Operations &amp; logistics</li>
+   <li>Executive support</li>
+   <li>Customer support &amp; telesales</li>
+   <li>HR verification</li>
+  </ul>
+ </div>
+</section>
+
+<section id="experience">
+ <div class="wrap">
+  <h2>Experience</h2>
+  <article class="current">
+   <div>
+    <h3>Executive Assistant to the VP Sales MEA</h3>
+    <p class="org">Veridos</p>
+    <p class="meta">Nigeria &middot; Present</p>
+   </div>
+   <div>
+    <p>Veridos provides secure identity solutions to governments. I work directly with Seun Taiwo-Akilapa, VP Sales MEA and Veridos Representative in Nigeria.</p>
+    <ul style="margin-top:14px">
+     <li>Write and send introductions and outreach to government bodies, including federal and state civil services.</li>
+     <li>Present Veridos solutions such as civil registry, staff and state ID credentials, digital identity, TrueSeal and digital signature, secure production and verification.</li>
+     <li>Coordinate the VP's communications, schedule and follow-ups across the region.</li>
+    </ul>
+   </div>
+  </article>
+  <div class="tl">
+   <div><h4>Web Developer, Cww Africa</h4><p>2022 onward &middot; Designing web and app interfaces.</p></div>
+   <div><h4>Product Manager, Game of Chance</h4><p>2022 onward &middot; Product performance, promotions and player retention.</p></div>
+   <div><h4>Customer Support &amp; Telesales Executive</h4><p>2022 onward &middot; Inbound and outbound client care, sales and feedback.</p></div>
+   <div><h4>Operations Manager, Lagos Boy Farm</h4><p>2017 &ndash; 2022 &middot; Logistics, inventory and workflow improvements.</p></div>
+   <div><h4>HR Assistant, SecureDrivers Consult</h4><p>2015 &ndash; 2017 &middot; Verifying information and supporting HR operations.</p></div>
+  </div>
+  <div class="edu">
+   <p>HND<small>Yaba College of Technology, 2020</small></p>
+   <p>OND<small>Yaba College of Technology, 2020</small></p>
+   <p>Web development<small>Zuri Tech, 2022</small></p>
+   <p>Web development<small>Cww Africa, 2022</small></p>
+  </div>
+ </div>
+</section>
+
+<section id="projects" class="alt">
+ <div class="wrap">
+  <h2>Projects &amp; apps</h2>
+  <div class="projects">
+   <article class="feature">
+    <div class="art">
+     <span>Personal finance app</span>
+     <strong>Budget Cockpit</strong>
     </div>
-
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/InShot_20250225_135354664.jpg">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-about">About Me</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nihil voluptas perspiciatis adipisci temporibus magni recusandae aperiam, eaque ad, in, porro aut fugit inventore! Dolor fugit itaque eaque nostrum? Tempora?</p>
-
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links"  onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links"  onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills" >
-                        <ul>
-                            <li><span>Web Developer</span><br>Designing Web/App Interface</li>
-                            <li><span>Hr Assistance</span><br> Verifying Information of all</li>
-                            <li><span>Operations Manager</span><br> Managing Logistics and basic Operation</li>
-                        </ul>
-                    </div>
-                    <!-- Work Experience -->
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2022 - Current</span><br>Game of Chance Manager</li>
-                            <li><span>2022 - Current</span><br>Game of Chance Executive</li>
-                            <li><span>2022 - Current</span><br>Tele-sales Executive</li>
-                            <li><span>2022 - Current</span><br>Web Developer at Cww Africa</li>
-                            <li><span>2017 - 2022</span><br> Operations Manager at Lagos Boy Farm</li>
-                            <li><span>2015 - 2017</span><br>Hr Assistant at SecureDrivers Consult</li>
-                        </ul>
-                    </div>
-                    <!-- Educational Qualification -->
-                    <div class="tab-contents" id="education">
-                        <ul>
-                          
-                            <li><span>2022</span><br>Cww Africa</li>
-                            <li><span>2022</span><br> Zuri Tech</li>  <li><span>2020</span><br>HND - Yaba College of Technology</li> <li><span>2020</span><br>OND - Yaba College of Technology</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="body">
+     <h3>Plan your money by pay cycle</h3>
+     <p>A budgeting app I designed and built. It organizes spending around each pay cycle in naira, and installs on your phone like a native app.</p>
+     <ul class="tags"><li>PWA</li><li>Supabase</li><li>Mobile-first</li></ul>
+     <a class="btn p" href="https://budgetcockpit.netlify.app/" target="_blank" rel="noopener">Open Budget Cockpit</a>
     </div>
+   </article>
+   <div class="grid3">
+    <article class="card"><img src="images/Hr.jpg" alt="" loading="lazy"><div><h3>Customer support &amp; telesales</h3><p>Drove sales and satisfaction by listening, advising and following up.</p></div></article>
+    <article class="card"><img src="images/Operation.jpg" alt="" loading="lazy"><div><h3>Operations</h3><p>Optimized logistics and inventory to lift productivity and cut cost.</p></div></article>
+    <article class="card"><img src="images/HEARTS-&-REWARD-%28INBOX%29.jpg" alt="" loading="lazy"><div><h3>Product management</h3><p>Improved gaming offerings through performance analysis and campaigns.</p></div></article>
+   </div>
+  </div>
+ </div>
+</section>
 
-    <!----------- services---------->
-    <div id="services">
-        <div class="container">
-            <h1 class="sub-about">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                     <h2>Customer Support & Telesales</h2>
-                    <p>As a Customer Support and Telesales Executive, I responded to both incoming calls and outbound client inquiries. investigated issues and complaints, made tailored recommendations to address customer concerns. I also listened to and addressed customer needs effectively, guaranteeing satisfaction with my assistance and fostering retention through high customer satisfaction. I also contacted prospects, which helped to surpass sales targets and built long-term relationships through collecting customer feedback and sharing data with internal teams</p>
-                        <a href="#">Learn more</a>
-                </div>
-           
-                <div>
-                    <i class="fa-solid fa-crop-simple"></i>
-                    <h2>Operation/Logistics</h2>
-                    <p>As an Operations and Logistics Manager, where I was in charge of day-to-day operational functions to achieve optimal and economical processes in order to maximize efficiency to the fullest.  I coordinated logistics, managed inventory, and streamlined workflows, ensuring the smooth flow of goods and services. My role included establishing and delivering process improvements that improved productivity and reduced costs by identifying process inefficiencies. Ensured clear communication and collaboration with cross-functional teams to contribute to operational successes and positive impacts on bottom-line profitability, while aligning organizational resources and initiatives to achieve business objectives</p>
-                    <a href="#">Learn more</a>
-                </div>
-           
-                <div>
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>Product Manager</h2>
-                    <p>As a Product Manager, I managed the build and optimize the overall performance of several gaming products. Collaborating with cross-functional teams including marketing, product and development teams. I ensured the smooth launch of listings and features. I focused on finding insights through products performance analysis, customer feedback collection, data and actionable insights to improve offerings and ensure follower retention. I led the launch of promotional campaigns, enhanced product positioning and generated revenue through impactful strategies. Based on the insights gained, I then played a pivotal role in ensuring the product portfolio was aligned with customer preferences and market trends to drive not only customer satisfaction but also business growth.</p>
-                    <a href="#">Learn more</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!-- portfolio-->
-<div id="portfolio">
-    <div class="container">
-      <h1 class="sub-about">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="images/Hr.jpg" alt="Tech Bro">
-                        <div class="layer">
-                            <h3>CUSTOMER SUPPORT & Telesales executive</h3>
-                            <p>As a Customer Support and Telesales Executive, I ensured satisfaction, drove sales, and built relationships.</p>
-                            <a href="#"><i class="fa-solid fa-link"></i></a>
-                        </div>
-                </div>
-                <div class="work">
-                    <img src="images/Operation.jpg" alt="Tech Bro"> 
-                        <div class="layer">
-                            <h3>OPERATIONS</h3>
-                            <p>Overseeing operations, optimizing logistics, managing inventory, and improving productivity and cost-effectiveness.</p>
-                            <a href="#"><i class="fa-solid fa-link"></i></a>
-                        </div> 
-                </div>
-                <div class="work">
-                    <img src="images/HEARTS-&-REWARD-(INBOX).jpg" alt="Tech Bro"> 
-                        <div class="layer">
-                            <h3>PRODUCT MANAGER</h3>
-                            <p>As a Product Manager, I enhanced gaming offerings, analyzed performance, collaborated with teams, and drove player engagement.</p>
-                            <a href="#"><i class="fa-solid fa-link"></i></a>
-                        </div>
-                </div>
-                
-            </div>
-            <a href="#" class="btn">Read More</a>   
-    </div>
-</div>
-
-
-<!--contact code-->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-about">Contact Me</h1>
-                        <p> <i class="fa-solid fa-paper-plane"></i> israelrejoice18@gmail.com</p>
-                        <p><i class="fa-solid fa-phone"></i>+2348132450965</p>
-                        <div class="social-icons">
-                            <a href="https://www.facebook.com/isreal.rejoice "><i class="fa-brands fa-facebook"></i></a>
-                            <a href="https://instagram.com/israel_rejoice"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/israel-onakoya-7b1773215"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://twitter.com/Israel_Rejoice?t=mZNiKSdpiqhNJLCQ2WPHPA&s=09"><i class="fa-brands fa-twitter"></i></a>
-                        </div>
-                        <a href="images/ONAKOYA OLASUBOMI ISRAEL 1.pdf" download class="btn btn2">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Enter Your Name" required>
-                        <input type="email" name="Email" placeholder="Enter your Email Address" required>
-                        <textarea name="Message" rows="3" placeholder="Please Enter Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <!--<span id="msg">Hello</span>-->
-                </div>
-
-            </div>
-        </div>
-        <div class="copyright">
-            <p>Copyright &copy 2022 with <i class="fa-solid fa-heart"></i> from Israel </p>
-        </div>
-    </div>
-
-
-
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link")
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab")
-            }
-            event.currentTarget.classList.add('active-link');
-            document.getElementById(tabname).classList.add("active-tab")
-        }
-    </script>
-    <script>
-        var sidemeu = document.getElementById("sidemenu");
-
-        function openmenu(){
-            sidemeu.style.right = "0";
-        }
-        function closemenu(){
-            sidemeu.style.right = "-200px";
-        }
-
-    </script>
-
-
-<script>
-  const scriptURL = '<https://script.google.com/macros/s/AKfycbw2Gl7aCUO_yGJZjJxqc0fM3EMkUN0zc1BDteetRdXW-3ttZH4G0MLCxpMs72ofGWDt/exec>'
-  const form = document.forms['submit-to-google-sheet']
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
-
+<section id="contact" class="contact">
+ <div class="wrap">
+  <h2>Let's talk</h2>
+  <p class="lead">Have a project, an opportunity or a question? Send me an email or message me on any platform below.</p>
+  <div class="links">
+   <a class="main" href="mailto:israelrejoice18@gmail.com">israelrejoice18@gmail.com</a>
+   <a href="tel:+2348132450965">+234 813 245 0965</a>
+   <a href="https://www.linkedin.com/in/israel-onakoya-7b1773215" target="_blank" rel="noopener">LinkedIn</a>
+   <a href="https://twitter.com/Israel_Rejoice" target="_blank" rel="noopener">Twitter</a>
+   <a href="https://instagram.com/israel_rejoice" target="_blank" rel="noopener">Instagram</a>
+   <a href="https://www.facebook.com/isreal.rejoice" target="_blank" rel="noopener">Facebook</a>
+  </div>
+ </div>
+</section>
+</main>
+<footer>&copy; 2026 Israel Onakoya Olasubomi</footer>
 </body>
 </html>
